@@ -1,0 +1,6 @@
+each block 32x32
+
+DR = 3x3 = 96x96
+
+
+full 160x160
