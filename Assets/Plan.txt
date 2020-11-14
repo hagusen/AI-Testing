@@ -1,0 +1,9 @@
+
+
+
+
+How to represent the grid?
+
+in code? 2D T array?
+
+or tile maps?
