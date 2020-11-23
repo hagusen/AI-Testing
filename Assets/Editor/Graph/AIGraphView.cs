@@ -20,7 +20,7 @@ public class AIGraphView : GraphView
         this.AddManipulator(new RectangleSelector());
         // Add node to the graphview
         AddElement(GenerateEntryPointNode());
-    }
+    }//
 
     private AINode GenerateEntryPointNode() {
 
