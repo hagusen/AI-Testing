@@ -22,6 +22,12 @@ public class AIGraphView : GraphView
         AddElement(GenerateEntryPointNode());
     }//
 
+    private Port GeneratePort(AINode node, Direction portdirection, Port.Capacity capacity = Port.Capacity.Single) {
+                                                                                                    
+        return node.InstantiatePort(Orientation.Horizontal, portdirection, capacity, typeof(float));// temp float type = data to transmit
+    }
+
+
     private AINode GenerateEntryPointNode() {
 
         var node = new AINode {
