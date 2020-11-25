@@ -45,7 +45,7 @@ public class AIGraph : EditorWindow
 
         var toolbar = new Toolbar();
 
-        var nodeCreateButton = new Button(()=> { _graphView.CreateNode("AI Node");        }); // change
+        var nodeCreateButton = new ToolbarButton(()=> { _graphView.CreateNode("AI Node");        }); // change
         nodeCreateButton.text = "Create Node";
         toolbar.Add(nodeCreateButton);
 

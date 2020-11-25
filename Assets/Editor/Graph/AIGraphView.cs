@@ -17,12 +17,19 @@ public class AIGraphView : GraphView
 
 
     public AIGraphView() {
+        styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
 
+        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
 
         this.AddManipulator(new ContentDragger());
         this.AddManipulator(new SelectionDragger());
         this.AddManipulator(new RectangleSelector());
         // Add node to the graphview
+
+        var grid = new GridBackground();
+        Insert(0, grid);
+        grid.StretchToParentSize();
+
         AddElement(GenerateEntryPointNode());
     }//
 
@@ -31,9 +38,15 @@ public class AIGraphView : GraphView
 
         var compatiblePorts = new List<Port>();
 
-        //ports.ForEach()
+        ports.ForEach(port => {
 
+            if (startPort != port && startPort.node != port.node) {
+                compatiblePorts.Add(port);
 
+            }
+        });
+
+        return compatiblePorts;
     }
 
 
@@ -56,7 +69,7 @@ public class AIGraphView : GraphView
         };
 
         //Create and set name of port
-        var generatedPort = GeneratePort(node, Direction.Output);
+        var generatedPort = GeneratePort(node, Direction.Output); // change for multi 
         generatedPort.portName = "Next";
         //Add port to node
         node.outputContainer.Add(generatedPort);
@@ -90,11 +103,28 @@ public class AIGraphView : GraphView
         inputPort.portName = "Input";
         aiNode.inputContainer.Add(inputPort);
 
+        var button = new Button(() => { AddChoicePort(aiNode); });
+        button.text = "Add Port";
+        aiNode.titleContainer.Add(button);
+
         aiNode.RefreshExpandedState();
         aiNode.RefreshPorts();
 
         aiNode.SetPosition(new Rect(Vector2.zero, defaultNodeSize));
 
         return aiNode;
+    }
+
+    private void AddChoicePort(AINode aiNode) {
+        var generatedPort = GeneratePort(aiNode, Direction.Output); // single
+
+        var outputPortCount = aiNode.outputContainer.Query("connector").ToList().Count;
+        generatedPort.portName = $"Choice {outputPortCount}";
+
+
+        aiNode.outputContainer.Add(generatedPort);
+
+        aiNode.RefreshExpandedState();
+        aiNode.RefreshPorts();
     }
 }
