@@ -9,10 +9,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
+using UnityEditor.UIElements;
+
+
+
 public class AIGraph : EditorWindow
 {
     private AIGraphView _graphView;
-     
+
     [MenuItem("Graph/AIGraph")]
     public static void OpenAIGraphWindow() {
 
@@ -24,7 +28,7 @@ public class AIGraph : EditorWindow
 
     }
 
-    void OnEnable() {
+    private void ConstructGraph() {
 
         //Create 
         _graphView = new AIGraphView {
@@ -35,6 +39,25 @@ public class AIGraph : EditorWindow
         _graphView.StretchToParentSize();
         // Add the graphview to the window
         rootVisualElement.Add(_graphView);
+    }
+
+    private void GenerateToolbar() {
+
+        var toolbar = new Toolbar();
+
+        var nodeCreateButton = new Button(()=> { _graphView.CreateNode("AI Node");        }); // change
+        nodeCreateButton.text = "Create Node";
+        toolbar.Add(nodeCreateButton);
+
+        rootVisualElement.Add(toolbar);
+
+    }
+
+
+
+    void OnEnable() {
+        ConstructGraph();
+        GenerateToolbar();
     }
 
 
