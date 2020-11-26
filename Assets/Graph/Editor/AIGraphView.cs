@@ -20,16 +20,18 @@ public class AIGraphView : GraphView
         styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
 
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
+        
+        //this.selection
 
         this.AddManipulator(new ContentDragger());
         this.AddManipulator(new SelectionDragger());
         this.AddManipulator(new RectangleSelector());
-        // Add node to the graphview
 
         var grid = new GridBackground();
         Insert(0, grid);
         grid.StretchToParentSize();
 
+        // Add node to the graphview
         AddElement(GenerateEntryPointNode());
     }//
 
@@ -41,7 +43,9 @@ public class AIGraphView : GraphView
         ports.ForEach(port => {
 
             if (startPort != port && startPort.node != port.node) {
-                compatiblePorts.Add(port);
+                if ((startPort.direction == Direction.Input && port.direction == Direction.Output) || (startPort.direction == Direction.Output && port.direction == Direction.Input)) {
+                    compatiblePorts.Add(port);
+                }
 
             }
         });
@@ -115,6 +119,7 @@ public class AIGraphView : GraphView
         return aiNode;
     }
 
+    // Add port to specific node
     private void AddChoicePort(AINode aiNode) {
         var generatedPort = GeneratePort(aiNode, Direction.Output); // single
 
