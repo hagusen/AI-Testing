@@ -88,8 +88,14 @@ public class AIGraph : EditorWindow
     void OnEnable() {
         ConstructGraph();
         GenerateToolbar();
+        GenerateMiniMap();
     }
 
+    private void GenerateMiniMap() {
+        var miniMap = new MiniMap{anchored = true};
+        miniMap.SetPosition(new Rect(10, 30, 200, 140));
+        _graphView.Add(miniMap);
+    }
 
     void OnDisable() {
 

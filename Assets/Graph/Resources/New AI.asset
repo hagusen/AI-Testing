@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bb02ca77252334aa2d1b151e637aaf, type: 3}
+  m_Name: New AI
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGUID: 4a57194f-15a6-44c7-baf8-b977a6f0610b
+    PortName: Next
+    TargetNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    PortName: 4344345
+    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    PortName: Choice 1
+    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    PortName: Choice 2
+    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    PortName: Choice 3
+    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 5
+    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 1
+    TargetNodeGUID: 9894d006-42dd-466e-8319-1bcdb0f70ac3
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 3
+    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 4
+    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 0
+    TargetNodeGUID: 9894d006-42dd-466e-8319-1bcdb0f70ac3
+  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    PortName: Choice 5
+    TargetNodeGUID: 8fc26a82-31e0-4fcb-8644-28f09f6db2d6
+  AINodeData:
+  - Guid: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    AItext: Hello
+    Position: {x: 281, y: 130}
+  - Guid: d0dfd0ed-ff76-4059-9f5f-ff7751f9f484
+    AItext: AI Node
+    Position: {x: 0, y: 0}
+  - Guid: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    AItext: hiesdasd sd
+    Position: {x: 636, y: 135}
+  - Guid: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
+    AItext: AI Node
+    Position: {x: 1038, y: 56}
+  - Guid: 9894d006-42dd-466e-8319-1bcdb0f70ac3
+    AItext: AI Node
+    Position: {x: 1037, y: 261}
+  - Guid: 8fc26a82-31e0-4fcb-8644-28f09f6db2d6
+    AItext: If
+    Position: {x: 1042, y: 395}

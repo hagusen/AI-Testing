@@ -13,14 +13,14 @@ using Button = UnityEngine.UIElements.Button;
 public class AIGraphView : GraphView
 {
 
-    private readonly Vector2 defaultNodeSize = new Vector2(150, 200);
+    public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
 
 
     public AIGraphView() {
         styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
 
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
-        
+
         //this.selection
 
         this.AddManipulator(new ContentDragger());
@@ -78,6 +78,8 @@ public class AIGraphView : GraphView
         //Add port to node
         node.outputContainer.Add(generatedPort);
 
+        node.capabilities &= ~Capabilities.Movable;
+        node.capabilities &= ~Capabilities.Deletable;
 
         // Mabye not needed?
         //Visual refresh
@@ -100,35 +102,80 @@ public class AIGraphView : GraphView
         var aiNode = new AINode {
             title = nodeName,
             AIText = nodeName,
-            GUID = Guid.NewGuid().ToString() 
+            GUID = Guid.NewGuid().ToString()
         };
 
         var inputPort = GeneratePort(aiNode, Direction.Input, Port.Capacity.Multi);
         inputPort.portName = "Input";
         aiNode.inputContainer.Add(inputPort);
 
+        aiNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+
         var button = new Button(() => { AddChoicePort(aiNode); });
         button.text = "Add Port";
         aiNode.titleContainer.Add(button);
 
+        var textField = new TextField(string.Empty);
+        textField.RegisterValueChangedCallback(evt => {
+
+            aiNode.AIText = evt.newValue;
+            aiNode.title = evt.newValue;
+        });
+        textField.SetValueWithoutNotify(aiNode.title);
+        aiNode.mainContainer.Add(textField);
+
         aiNode.RefreshExpandedState();
         aiNode.RefreshPorts();
-
         aiNode.SetPosition(new Rect(Vector2.zero, defaultNodeSize));
 
         return aiNode;
     }
 
     // Add port to specific node
-    private void AddChoicePort(AINode aiNode) {
+    public void AddChoicePort(AINode aiNode, string overriddenPortName = "") {
         var generatedPort = GeneratePort(aiNode, Direction.Output); // single
 
+        // Remove old labels also creates a bug with the edge
+        //var oldLabel = generatedPort.contentContainer.Q<Label>("type"); // Find the label
+        //generatedPort.contentContainer.Remove(oldLabel);
+        //
+
+
         var outputPortCount = aiNode.outputContainer.Query("connector").ToList().Count;
-        generatedPort.portName = $"Choice {outputPortCount}";
+        var choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Choice {outputPortCount}" : overriddenPortName;
 
+        // text field as port
+        var textField = new TextField {
+            name = string.Empty,
+            value = choicePortName
+        };
+        textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
+        generatedPort.contentContainer.Add(new Label("  "));
+        generatedPort.contentContainer.Add(textField);
+        //
 
+        var deleteButton = new Button(() => RemovePort(aiNode, generatedPort)) {
+            text = "X"
+        };
+        generatedPort.contentContainer.Add(deleteButton);
+
+        generatedPort.portName = choicePortName;
         aiNode.outputContainer.Add(generatedPort);
+        aiNode.RefreshExpandedState();
+        aiNode.RefreshPorts();
+    }
 
+    private void RemovePort(AINode aiNode, Port generatedPort) {
+        var targetEdge = edges.ToList().Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
+
+        if (targetEdge.Any()) {
+            //loop maybe?
+            var edge = targetEdge.First();
+            edge.input.Disconnect(edge);
+            RemoveElement(targetEdge.First());
+        }
+        // Delete Port
+        aiNode.outputContainer.Remove(generatedPort);
         aiNode.RefreshExpandedState();
         aiNode.RefreshPorts();
     }
