@@ -13,55 +13,22 @@ MonoBehaviour:
   m_Name: New AI
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGUID: 4a57194f-15a6-44c7-baf8-b977a6f0610b
+  - BaseNodeGUID: d6484f91-9a2c-443c-9ad9-2e1c0caf292b
     PortName: Next
-    TargetNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
-  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
-    PortName: 4344345
-    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
+    TargetNodeGUID: e5c8dd24-9c22-4fe3-8ffd-8a5a1e641540
+  - BaseNodeGUID: e5c8dd24-9c22-4fe3-8ffd-8a5a1e641540
     PortName: Choice 1
-    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
-    PortName: Choice 2
-    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-  - BaseNodeGUID: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
-    PortName: Choice 3
-    TargetNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    PortName: Choice 5
-    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    PortName: Choice 1
-    TargetNodeGUID: 9894d006-42dd-466e-8319-1bcdb0f70ac3
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    PortName: Choice 3
-    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    PortName: Choice 4
-    TargetNodeGUID: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
+    TargetNodeGUID: 9d8d33a7-d691-42bf-84d8-62f0e82eb6c5
+  - BaseNodeGUID: e5c8dd24-9c22-4fe3-8ffd-8a5a1e641540
     PortName: Choice 0
-    TargetNodeGUID: 9894d006-42dd-466e-8319-1bcdb0f70ac3
-  - BaseNodeGUID: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    PortName: Choice 5
-    TargetNodeGUID: 8fc26a82-31e0-4fcb-8644-28f09f6db2d6
+    TargetNodeGUID: b9a5210b-7d7c-4698-be2a-860461dc314f
   AINodeData:
-  - Guid: 993eb935-3c00-4e48-b5f8-8bc2ebb30439
-    AItext: Hello
-    Position: {x: 281, y: 130}
-  - Guid: d0dfd0ed-ff76-4059-9f5f-ff7751f9f484
+  - Guid: e5c8dd24-9c22-4fe3-8ffd-8a5a1e641540
     AItext: AI Node
-    Position: {x: 0, y: 0}
-  - Guid: 405cd62a-afbf-4ac4-8fd1-6132bcd8974a
-    AItext: hiesdasd sd
-    Position: {x: 636, y: 135}
-  - Guid: 3caee0d7-19c7-441e-9fcf-46b8e4993eaf
+    Position: {x: 358, y: 68}
+  - Guid: b9a5210b-7d7c-4698-be2a-860461dc314f
     AItext: AI Node
-    Position: {x: 1038, y: 56}
-  - Guid: 9894d006-42dd-466e-8319-1bcdb0f70ac3
+    Position: {x: 784, y: 137}
+  - Guid: 9d8d33a7-d691-42bf-84d8-62f0e82eb6c5
     AItext: AI Node
-    Position: {x: 1037, y: 261}
-  - Guid: 8fc26a82-31e0-4fcb-8644-28f09f6db2d6
-    AItext: If
-    Position: {x: 1042, y: 395}
+    Position: {x: 695, y: -7}
