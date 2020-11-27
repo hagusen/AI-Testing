@@ -55,8 +55,8 @@ public class AIGraph : EditorWindow
         fileNameTextField.RegisterValueChangedCallback(evt => _fileName = evt.newValue);
         toolbar.Add(fileNameTextField);
 
-        toolbar.Add(new ToolbarButton(() => SaveData()) {text = "Save Data" });
-        toolbar.Add(new ToolbarButton(() => LoadData()) {text = "Load Data" });
+        toolbar.Add(new ToolbarButton(() => RequestDataOperation(true)) {text = "Save Data" });
+        toolbar.Add(new ToolbarButton(() => RequestDataOperation(false)) {text = "Load Data" });
 
         var nodeCreateButton = new ToolbarButton(()=> { _graphView.CreateNode("AI Node");        }); // change
         nodeCreateButton.text = "Create Node";
@@ -68,12 +68,21 @@ public class AIGraph : EditorWindow
 
     }
 
-    private void LoadData() {
-        
-    }
 
-    private void SaveData() {
-        
+    private void RequestDataOperation(bool save) {
+        if (string.IsNullOrEmpty(_fileName)) {
+            EditorUtility.DisplayDialog("Invalid file name!", "Please enter a valid file name", "Ok");
+        }
+
+        var SaveUtility = GraphSaveUtility.GetInstance(_graphView);
+
+        if (save) {
+            SaveUtility.SaveGraph(_fileName);
+        }
+        else {
+            SaveUtility.LoadGraph(_fileName);
+        }
+
     }
 
     void OnEnable() {
