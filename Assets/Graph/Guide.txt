@@ -1,0 +1,33 @@
+
+/Runtime/
+	
+	[AIContainer]
+		The actual Graph scriptable object 
+
+	[AINodeData]
+		Class for AINode data
+
+	[NodeLinkData]
+		Class for all the Node Links
+
+/Editor/
+
+	[AIAssetHandler]
+		Handles OnOpenAsset for aiContainer to start AiGraph and load it
+
+	[AIGraph]
+		EditorWindow 
+
+	[AIGraphView]
+
+	[AINode]
+
+	[GraphSaveUtility]
+
+
+/Editor/Resources
+	
+	[AIGraph]
+		Style document for the GraphView
+	[Node]
+		Style document for the Nodes 
