@@ -15,6 +15,7 @@ public class AIGraphView : GraphView
 
     public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
 
+    private NodeSearchWindow _searchWindow;
 
     public AIGraphView() {
         styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
@@ -33,7 +34,17 @@ public class AIGraphView : GraphView
 
         // Add node to the graphview
         AddElement(GenerateEntryPointNode());
+
+        AddSearchWindow();
     }//
+
+    private void AddSearchWindow() {
+
+        _searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
+        _searchWindow.Init(this);
+
+        nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), _searchWindow);
+    }
 
     //Override since we have no data to pass around
     public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) {

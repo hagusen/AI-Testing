@@ -24,7 +24,7 @@ public class GraphSaveUtility
 
     public void SaveGraph(string fileName) { // Ports are saved by order now!!
 
-        if (!Edges.Any())
+        if (!Edges.Any()) // No edges in graph then cancel save
             return;
         
         // Save all edges

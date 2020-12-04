@@ -27,9 +27,18 @@
 	[GraphSaveUtility]
 		Helper class to Save & Load the graph to a scriptable object
 
-/Editor/Resources
+	[NodeSearchWindow]
+		Script containing the searchwindow and it's content
+
+/Editor/Resources/
 	
 	[AIGraph]
 		Style document for the GraphView
 	[Node]
 		Style document for the Nodes 
+
+
+/Resources/
+	
+	Currently folder for saving and loading graphs
+	
