@@ -12,18 +12,20 @@
 
 /Editor/
 
-	[AIAssetHandler]
+	[AIAssetHandler] // Unfinished 
 		Handles OnOpenAsset for aiContainer to start AiGraph and load it
 
 	[AIGraph]
-		EditorWindow 
+		EditorWindow containing The AIGraphView
 
 	[AIGraphView]
+		The actual Node editor that uses Graphview, including all nodes 
 
 	[AINode]
+		a class inheriting from Graphview.Node with simple extra information
 
 	[GraphSaveUtility]
-
+		Helper class to Save & Load the graph to a scriptable object
 
 /Editor/Resources
 	
