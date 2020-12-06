@@ -33,7 +33,7 @@ public class AIGraph : EditorWindow
     private void ConstructGraph() {
 
         //Create 
-        _graphView = new AIGraphView {
+        _graphView = new AIGraphView(this) {
             name = "AI Graph"
 
         };
@@ -57,11 +57,11 @@ public class AIGraph : EditorWindow
 
         toolbar.Add(new ToolbarButton(() => RequestDataOperation(true)) {text = "Save Data" });
         toolbar.Add(new ToolbarButton(() => RequestDataOperation(false)) {text = "Load Data" });
-
+        /*
         var nodeCreateButton = new ToolbarButton(()=> { _graphView.CreateNode("AI Node");        }); // change
         nodeCreateButton.text = "Create Node";
         toolbar.Add(nodeCreateButton);
-
+        */
 
         //
         rootVisualElement.Add(toolbar);

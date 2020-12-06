@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor;
+using UnityEngine.UIElements;
 
 // The basic data provider for the search window
 public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
 {
 
     private AIGraphView _graphView;
+    private EditorWindow _window;
+
+    private Texture2D _iconFix;
 
 
-    public void Init(AIGraphView graphView) {
+    public void Init(EditorWindow window, AIGraphView graphView) {
         _graphView = graphView;
+        _window = window;
+
+        _iconFix = new Texture2D(1, 1);
+        _iconFix.SetPixel(0, 0, new Color(0,0,0,0));
+        _iconFix.Apply();
     }
 
 
@@ -24,12 +34,12 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
             //Logic Group
             new SearchTreeGroupEntry(new GUIContent("Logic"), 1),
             // AINode
-            new SearchTreeEntry(new GUIContent("AINode")) {
+            new SearchTreeEntry(new GUIContent("AINode", _iconFix)) {
                 userData = new AINode(),
                 level = 2,
             },
             //
-            new SearchTreeEntry(new GUIContent("Hello world")) {
+            new SearchTreeEntry(new GUIContent("Hello world", _iconFix)) {
                 level = 2
             }
 
@@ -39,12 +49,15 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
 
     public bool OnSelectEntry(SearchTreeEntry SearchTreeEntry, SearchWindowContext context) {
 
+        var worldMousePosition = _window.rootVisualElement.ChangeCoordinatesTo(_window.rootVisualElement.parent, context.screenMousePosition - _window.position.position);
+        var localMousePosition = _graphView.contentViewContainer.WorldToLocal(worldMousePosition);
+
         switch (SearchTreeEntry.userData) {
 
             case AINode aiNode:
 
                 Debug.Log("AINode Created");
-                _graphView.CreateNode("s");
+                _graphView.CreateNode("s", localMousePosition); 
                 return true;
 
             default:

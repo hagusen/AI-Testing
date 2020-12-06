@@ -120,7 +120,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.AINodeData) {
             //Instead use enum?
-            var tempNode = _targetGraphView.CreateAINode(nodeData.AItext);
+            var tempNode = _targetGraphView.CreateAINode(nodeData.AItext, Vector2.zero);
             tempNode.GUID = nodeData.Guid;
             _targetGraphView.AddElement(tempNode);
 

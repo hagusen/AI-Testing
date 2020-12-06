@@ -17,7 +17,7 @@ public class AIGraphView : GraphView
 
     private NodeSearchWindow _searchWindow;
 
-    public AIGraphView() {
+    public AIGraphView(EditorWindow window) {
         styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
 
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
@@ -35,13 +35,13 @@ public class AIGraphView : GraphView
         // Add node to the graphview
         AddElement(GenerateEntryPointNode());
 
-        AddSearchWindow();
+        AddSearchWindow(window);
     }//
 
-    private void AddSearchWindow() {
+    private void AddSearchWindow(EditorWindow window) {
 
         _searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
-        _searchWindow.Init(this);
+        _searchWindow.Init(window, this);
 
         nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), _searchWindow);
     }
@@ -103,12 +103,12 @@ public class AIGraphView : GraphView
         return node;
     }
 
-    public void CreateNode(string nodeName) {
+    public void CreateNode(string nodeName, Vector2 position) {
 
-        AddElement(CreateAINode(nodeName));
+        AddElement(CreateAINode(nodeName, position));
     }
 
-    public AINode CreateAINode(string nodeName) {
+    public AINode CreateAINode(string nodeName, Vector2 position) {
 
         var aiNode = new AINode {
             title = nodeName,
@@ -137,7 +137,7 @@ public class AIGraphView : GraphView
 
         aiNode.RefreshExpandedState();
         aiNode.RefreshPorts();
-        aiNode.SetPosition(new Rect(Vector2.zero, defaultNodeSize));
+        aiNode.SetPosition(new Rect(position, defaultNodeSize));
 
         return aiNode;
     }
