@@ -9,6 +9,10 @@ using UnityEngine.UIElements;
 public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
 {
 
+    // https://www.google.com/search?q=get+list+of+every+inherited+classes&oq=get+list+of+every+inher&aqs=chrome.1.69i57j33i22i29i30.53035j0j7&sourceid=chrome&ie=UTF-8
+    // test this
+    //
+
     private AIGraphView _graphView;
     private EditorWindow _window;
 

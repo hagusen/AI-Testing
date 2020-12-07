@@ -5,6 +5,7 @@ using System.Linq;
 //using Subtegral.DialogueSystem.DataContainers;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 //using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -14,6 +15,9 @@ public class AIGraphView : GraphView
 {
 
     public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
+
+    public List<ExposedVariable> exposedVariables = new List<ExposedVariable>();
+    public Blackboard blackboard;
 
     private NodeSearchWindow _searchWindow;
 
@@ -98,9 +102,56 @@ public class AIGraphView : GraphView
         node.RefreshPorts();
 
 
-
+        //
         node.SetPosition(new Rect(100, 200, 100, 150));
         return node;
+    }
+
+    public void AddPropertyToBlackBoard(ExposedVariable exposedVariable) {
+
+        var localVariableName = exposedVariable.variableName;
+        var localVariableValue = exposedVariable.variableValue;
+
+        int iterator = 1;
+        while (exposedVariables.Any(x => x.variableName == localVariableName)) {
+            localVariableName = $"{localVariableName}({iterator})";
+            iterator++;
+            /* FIX Later
+            if (localVariableName.Contains($"({iterator - 1})")) {
+                localVariableName = $"{localVariableName.Substring(0, localVariableName.Length -3}" +"({iterator})";
+            }
+            */
+        }
+
+
+        var variable = new ExposedVariable();
+        variable.variableName = localVariableName;
+        variable.variableValue = localVariableValue;
+        exposedVariables.Add(variable);
+
+
+        var container = new VisualElement();
+        var blackboardField = new BlackboardField { text = variable.variableName, typeText = "int variable" };
+       // blackboardField.RegisterCallback<DragAndDrop>(evt => { });
+        container.Add(blackboardField);
+
+
+        var variableValueTextField = new TextField("Value:") {
+
+            value = variable.variableValue
+        };
+
+        variableValueTextField.RegisterValueChangedCallback(evt => {
+
+            var changingVariableIndex = exposedVariables.FindIndex(x => x.variableName == variable.variableName);
+            exposedVariables[changingVariableIndex].variableValue = evt.newValue;
+        
+        });
+        var blackboardValueRow = new BlackboardRow(blackboardField, variableValueTextField);
+        container.Add(blackboardValueRow);
+
+
+        blackboard.Add(container);
     }
 
     public void CreateNode(string nodeName, Vector2 position) {
@@ -122,8 +173,8 @@ public class AIGraphView : GraphView
 
         aiNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
 
-        var button = new Button(() => { AddChoicePort(aiNode); });
-        button.text = "Add Port";
+        var button = new ToolbarButton(() => { AddChoicePort(aiNode); });
+        button.text = "";
         aiNode.titleContainer.Add(button);
 
         var textField = new TextField(string.Empty);
@@ -165,7 +216,7 @@ public class AIGraphView : GraphView
         generatedPort.contentContainer.Add(textField);
         //
 
-        var deleteButton = new Button(() => RemovePort(aiNode, generatedPort)) {
+        var deleteButton = new ToolbarButton(() => RemovePort(aiNode, generatedPort)) {
             text = "X"
         };
         generatedPort.contentContainer.Add(deleteButton);

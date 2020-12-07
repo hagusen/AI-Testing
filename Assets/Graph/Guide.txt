@@ -40,5 +40,5 @@
 
 /Resources/
 	
-	Currently folder for saving and loading graphs
+	Currently a folder for saving and loading graphs
 	
