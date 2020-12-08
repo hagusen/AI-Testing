@@ -24,7 +24,7 @@ public class AIGraphView : GraphView
     public AIGraphView(EditorWindow window) {
         styleSheets.Add(Resources.Load<StyleSheet>("AIGraph"));
 
-        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
+        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale *2);
 
         //this.selection
 
@@ -103,7 +103,7 @@ public class AIGraphView : GraphView
 
 
         //
-        node.SetPosition(new Rect(100, 200, 100, 150));
+        node.SetPosition(new Rect(500,300, 100, 150));
         return node;
     }
 
