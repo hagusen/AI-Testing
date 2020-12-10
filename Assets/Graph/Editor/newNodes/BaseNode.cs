@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class BaseNode : Node
+public abstract class BaseNode : Node
 {
 
     public string GUID;
