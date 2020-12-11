@@ -1,13 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Reflection;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
 
-public static class NodeCollector
+static class NodeCollector
 {
-    static void Test() {
+    public static void FindAllNodes() {
 
-        TypeCache.GetTypesDerivedFrom<BaseNode>();
+
+
+        foreach (var nodeType in TypeCache.GetTypesDerivedFrom<BaseNode>()) {
+
+            Debug.Log(nodeType.FullName);
+
+
+  //          if (nodeType.IsAbstract)
+                //return false; // skip node
+
+//            return nodeType.GetCustomAttributes<NodeMenuItemAttribute>().Count() > 0;
+
+        }
+
+    }
+
+    //Called the firsttime any method is called
+    //Constructor
+    static NodeCollector() {
+
+        FindAllNodes();
+        
 
     }
 

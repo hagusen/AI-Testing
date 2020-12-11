@@ -50,6 +50,9 @@ public class AIGraph : EditorWindow
         GenerateToolbar();
         GenerateMiniMap();
         GenerateBlackBoard();
+        //
+        //
+        NodeCollector.FindAllNodes();
     }
     private void ConstructGraph() {
 
