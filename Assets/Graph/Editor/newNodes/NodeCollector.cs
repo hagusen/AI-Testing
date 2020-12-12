@@ -15,12 +15,14 @@ static class NodeCollector
         foreach (var nodeType in TypeCache.GetTypesDerivedFrom<BaseNode>()) {
 
             Debug.Log(nodeType.FullName);
+            var attr = nodeType.GetCustomAttributes(typeof(NodeMenuItemAttribute), false) as NodeMenuItemAttribute[];
 
+            Debug.Log(attr[0].name);
 
-  //          if (nodeType.IsAbstract)
-                //return false; // skip node
+            //          if (nodeType.IsAbstract)
+            //return false; // skip node
 
-//            return nodeType.GetCustomAttributes<NodeMenuItemAttribute>().Count() > 0;
+            //            return nodeType.GetCustomAttributes<NodeMenuItemAttribute>().Count() > 0;
 
         }
 
@@ -31,7 +33,7 @@ static class NodeCollector
     static NodeCollector() {
 
         FindAllNodes();
-        
+        Debug.Log("Constructor");
 
     }
 
