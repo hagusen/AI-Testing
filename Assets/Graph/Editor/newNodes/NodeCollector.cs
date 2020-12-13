@@ -28,12 +28,19 @@ static class NodeCollector
 
     }
 
+
+    public static void Initialize() {
+
+        FindAllNodes();
+        Debug.Log("Constructor");
+
+    }
+
+
     //Called the firsttime any method is called
     //Constructor
     static NodeCollector() {
 
-        FindAllNodes();
-        Debug.Log("Constructor");
 
     }
 
