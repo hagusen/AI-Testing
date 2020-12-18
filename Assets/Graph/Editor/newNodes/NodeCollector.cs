@@ -40,8 +40,7 @@ static class NodeCollector
     //Called the firsttime any method is called
     //Constructor
     static NodeCollector() {
-
-
+        Initialize();
     }
 
 }
