@@ -7,8 +7,8 @@ public abstract class BaseNode : Node
 {
 
     public string GUID;
-
-
+    // sdsd
+    //sd
     //public bool EntryPoint = false;
 
 
