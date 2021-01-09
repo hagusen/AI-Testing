@@ -53,7 +53,7 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
         for (int i = 0; i < 30; i++)
         {
 
-            tree.Add(new SearchTreeEntry(new GUIContent("AINode", _iconFix))
+            tree.Add(new SearchTreeEntry(new GUIContent("AINode" + i, _iconFix))
             {
                 userData = new AINode(),
                 level = 2,
@@ -87,4 +87,15 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
         //CreateNode(SearchTreeEntry.userData)
 
     }
+
+
+        void OnDestroy()
+        {
+            if (_iconFix != null)
+            {
+                DestroyImmediate(_iconFix);
+                _iconFix = null;
+            }
+        }
+
 }
