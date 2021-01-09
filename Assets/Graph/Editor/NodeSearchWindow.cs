@@ -19,17 +19,19 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
     private Texture2D _iconFix;
 
 
-    public void Init(EditorWindow window, AIGraphView graphView) {
+    public void Init(EditorWindow window, AIGraphView graphView)
+    {
         _graphView = graphView;
         _window = window;
 
         _iconFix = new Texture2D(1, 1);
-        _iconFix.SetPixel(0, 0, new Color(0,0,0,0));
+        _iconFix.SetPixel(0, 0, new Color(0, 0, 0, 0));
         _iconFix.Apply();
     }
 
 
-    public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context) {
+    public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
+    {
 
         var tree = new List<SearchTreeEntry> {
             //First group entries are the header of it
@@ -48,20 +50,33 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
             }
 
         };
+        for (int i = 0; i < 30; i++)
+        {
+
+            tree.Add(new SearchTreeEntry(new GUIContent("AINode", _iconFix))
+            {
+                userData = new AINode(),
+                level = 2,
+            });
+        }
+
+
         return tree;
     }
 
-    public bool OnSelectEntry(SearchTreeEntry SearchTreeEntry, SearchWindowContext context) {
+    public bool OnSelectEntry(SearchTreeEntry SearchTreeEntry, SearchWindowContext context)
+    {
 
         var worldMousePosition = _window.rootVisualElement.ChangeCoordinatesTo(_window.rootVisualElement.parent, context.screenMousePosition - _window.position.position);
         var localMousePosition = _graphView.contentViewContainer.WorldToLocal(worldMousePosition);
 
-        switch (SearchTreeEntry.userData) {
+        switch (SearchTreeEntry.userData)
+        {
 
             case AINode aiNode:
 
                 Debug.Log("AINode Created");
-                _graphView.CreateNode("s", localMousePosition); 
+                _graphView.CreateNode("s", localMousePosition);
                 return true;
 
             default:

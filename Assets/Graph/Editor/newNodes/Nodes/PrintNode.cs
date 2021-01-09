@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,12 +13,17 @@ public class PrintNode : BaseNode
 
 
 
-
+    
     public int out_a;
 
 
         // testtt
 
+    public void Calculate (){
+
+
+
+    }
 
 
 }
