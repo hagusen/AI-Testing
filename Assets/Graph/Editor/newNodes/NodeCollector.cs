@@ -24,6 +24,7 @@ static class NodeCollector
 
             //            return nodeType.GetCustomAttributes<NodeMenuItemAttribute>().Count() > 0;
 
+
         }
 
     }
