@@ -8,6 +8,23 @@ using System.Linq;
 
 static class NodeCollector
 {
+
+    public struct PortDescription{
+
+        public Type nodeType; // ??
+        public Type portType;
+
+        public bool isInput;
+        public string portName;
+
+    }
+    public class NodeDescriptions{
+
+        public Dictionary<string, Type> menutitleToNode = new Dictionary<string, Type>();
+        public List<NodeDescriptions> portDescriptions = new List<NodeDescriptions>();
+
+    }
+
     public static void FindAllNodes() {
 
 
@@ -23,7 +40,7 @@ static class NodeCollector
 
 
 
-            
+
 
             //          if (nodeType.IsAbstract)
             //return false; // skip node
@@ -62,15 +79,18 @@ static class NodeCollector
     }
 
     /*
-    INTSTR
-    POGDOG
     CYBERSPICE
+    POGDOG
+    
+
+    Pedal star
+    RETRO BARK
+    GAMEFLESH
 
     HUGBUG
 
     SUPER MEGA REGULAR
-    RETRO BARK
-    GAMEFLESH
+    INTSTR
 
     */
 
