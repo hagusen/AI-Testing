@@ -32,14 +32,8 @@ static class NodeCollector
 
             Debug.Log(nodeType.FullName);
             var attr = nodeType.GetCustomAttributes(typeof(NodeMenuItemAttribute), false) as NodeMenuItemAttribute[];
-
+//
             Debug.Log(attr[0].name);
-
-
-
-
-
-
 
 
             //          if (nodeType.IsAbstract)
@@ -56,7 +50,11 @@ static class NodeCollector
 
             foreach (var method in typeof(IUseAIGraph).GetMethods())
             {
-                
+                var x = method.GetParameters()[0].Name;
+
+
+               // method.Invoke()
+                //method.Name;
             }
 
 

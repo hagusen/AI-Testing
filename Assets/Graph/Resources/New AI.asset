@@ -22,12 +22,12 @@ MonoBehaviour:
   - BaseNodeGUID: e9ec234c-26b0-4851-bb8d-e4cb2ad74df0
     PortName: Next
     TargetNodeGUID: 177bcaa1-2975-4a46-8d8c-1a487dfe1da0
-  - BaseNodeGUID: 13ad445e-844e-416f-9743-e2b4934c97fd
-    PortName: Output
-    TargetNodeGUID: e9ec234c-26b0-4851-bb8d-e4cb2ad74df0
   - BaseNodeGUID: e9ec234c-26b0-4851-bb8d-e4cb2ad74df0
     PortName: False
     TargetNodeGUID: 95b21fc8-f654-4ca6-975a-48cd70fdd770
+  - BaseNodeGUID: 13ad445e-844e-416f-9743-e2b4934c97fd
+    PortName: Output
+    TargetNodeGUID: e9ec234c-26b0-4851-bb8d-e4cb2ad74df0
   - BaseNodeGUID: 88d276a5-81f2-415f-ae90-7dd240f88f3b
     PortName: output
     TargetNodeGUID: 95b21fc8-f654-4ca6-975a-48cd70fdd770
@@ -43,25 +43,25 @@ MonoBehaviour:
   AINodeData:
   - Guid: e9ec234c-26b0-4851-bb8d-e4cb2ad74df0
     AItext: If
-    Position: {x: 523, y: 134}
-  - Guid: 13ad445e-844e-416f-9743-e2b4934c97fd
-    AItext: Random Bool
-    Position: {x: -4, y: -9}
-  - Guid: 88d276a5-81f2-415f-ae90-7dd240f88f3b
-    AItext: 'Random Bool2 '
-    Position: {x: 513, y: 40}
+    Position: {x: 663, y: 137}
   - Guid: 95b21fc8-f654-4ca6-975a-48cd70fdd770
     AItext: If
-    Position: {x: 960, y: 156}
+    Position: {x: 1100, y: 159}
   - Guid: 65ce0096-4def-472e-9263-1a94560685ae
     AItext: Idle
-    Position: {x: 1187, y: 44}
+    Position: {x: 1327, y: 47}
   - Guid: 86c000c6-3576-40c4-804d-0f5bc87ff878
     AItext: Attack
-    Position: {x: 1314, y: 154}
+    Position: {x: 1454, y: 157}
   - Guid: 177bcaa1-2975-4a46-8d8c-1a487dfe1da0
     AItext: Change variable to 60
-    Position: {x: 777, y: 368}
+    Position: {x: 917, y: 371}
   - Guid: 4773024d-3ab5-4529-a515-3665a834e621
     AItext: Timer
-    Position: {x: 471, y: 361}
+    Position: {x: 465, y: 517}
+  - Guid: 13ad445e-844e-416f-9743-e2b4934c97fd
+    AItext: Random Bool
+    Position: {x: 315, y: 130}
+  - Guid: 88d276a5-81f2-415f-ae90-7dd240f88f3b
+    AItext: 'Random Bool2 '
+    Position: {x: 649, y: -53}
