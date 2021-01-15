@@ -21,7 +21,7 @@ public class PrintNode : BaseNode
 
     public void Calculate (){
 
-
+            out_a = in_a + in_b;
 
     }
 

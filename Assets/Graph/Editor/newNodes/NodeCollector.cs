@@ -52,8 +52,8 @@ static class NodeCollector
             {
                 var x = method.GetParameters()[0].Name;
 
-
                // method.Invoke()
+
                 //method.Name;
             }
 
