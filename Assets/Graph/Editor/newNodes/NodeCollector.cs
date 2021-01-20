@@ -42,6 +42,7 @@ static class NodeCollector
             //            return nodeType.GetCustomAttributes<NodeMenuItemAttribute>().Count() > 0;
 
         }
+        
 
     }
 
@@ -52,7 +53,7 @@ static class NodeCollector
             {
                 var x = method.GetParameters()[0].Name;
 
-               // method.Invoke()
+               //method.Invoke()
 
                 //method.Name;
             }
@@ -76,20 +77,6 @@ static class NodeCollector
         Initialize();
     }
 
-    /*
-    CYBERSPICE
-    POGDOG
-    
 
-    Pedal star
-    RETRO BARK
-    GAMEFLESH
-
-    HUGBUG
-
-    SUPER MEGA REGULAR
-    INTSTR
-
-    */
 
 }

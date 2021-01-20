@@ -16,7 +16,10 @@ public interface IUseAIGraph
     //[GraphOutput(typeof(int), typeof(bool))]
     void MoveTowardPlayer(int speed, bool IsFast);
 
-    ///// Hur ska jag skicka in dem???
+
+
+
+    /// Hur ska jag skicka in dem???
     
 
 }

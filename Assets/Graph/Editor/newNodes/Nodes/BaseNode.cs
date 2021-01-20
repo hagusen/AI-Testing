@@ -10,5 +10,5 @@ public abstract class BaseNode : Node
     // sdsd
     //sd
     //public bool EntryPoint = false;
-    
+    public abstract void Calculate();
 }

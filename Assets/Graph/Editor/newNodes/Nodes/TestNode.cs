@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [NodeMenuItem("Logic/TestNode")]
-public class TestNode : BaseNode
+public class TestNode //: BaseNode
 {
     [Input("In A")]
     public int in_a;
