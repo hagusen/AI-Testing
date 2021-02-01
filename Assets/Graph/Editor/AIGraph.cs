@@ -52,7 +52,7 @@ public class AIGraph : EditorWindow
         GenerateBlackBoard();
         //
         //
-        NodeCollector.FindAllNodes();
+        //NodeCollector.FindAllNodes();
     }
     private void ConstructGraph() {
 
@@ -95,8 +95,8 @@ public class AIGraph : EditorWindow
     private void GenerateMiniMap() {
         var miniMap = new MiniMap { anchored = true };
         //Changed to position. width
-        var cords = _graphView.contentViewContainer.WorldToLocal(new Vector2(this.position.width, 30));
-        miniMap.SetPosition(new Rect(cords.x - 210, cords.y, 200, 140));
+        var cords = _graphView.contentViewContainer.WorldToLocal(new Vector2(this.position.width -10, 30));
+        miniMap.SetPosition(new Rect(10 , 30, 200, 140));
         _graphView.Add(miniMap);
     }
 
@@ -110,7 +110,7 @@ public class AIGraph : EditorWindow
             _graphView.AddPropertyToBlackBoard(new ExposedVariable());
         };
 
-        blackboard.SetPosition(new Rect(10, 30, 200, 300));
+        blackboard.SetPosition(new Rect(10,180, 200, 300));
         blackboard.scrollable = true;
 
 
