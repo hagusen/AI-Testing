@@ -15,11 +15,11 @@ using UnityEngine;
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
 public class NodeMenuItemAttribute : Attribute
 {
-    public string name; // name in search menu
+    public string path; // name in search menu
 
-    public NodeMenuItemAttribute(string name) {
+    public NodeMenuItemAttribute(string path) {
 
-        this.name = name;
+        this.path = path;
     }
 }
 

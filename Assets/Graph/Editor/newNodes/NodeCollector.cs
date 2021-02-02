@@ -21,19 +21,37 @@ static class NodeCollector
     public class NodeDescriptions{
 
         public Dictionary<string, Type> menutitleToNode = new Dictionary<string, Type>();
-        public List<NodeDescriptions> portDescriptions = new List<NodeDescriptions>();
+        //public List<PortDescription> portDescriptions = new List<PortDescription>();
 
     }
 
     public static void FindAllNodes() {
 
+        NodeDescriptions localNodes = new NodeDescriptions();
 
         foreach (var nodeType in TypeCache.GetTypesDerivedFrom<BaseNode>()) {
 
-            Debug.Log(nodeType.FullName);
-            var attr = nodeType.GetCustomAttributes(typeof(NodeMenuItemAttribute), false) as NodeMenuItemAttribute[];
-//
-            Debug.Log(attr[0].name);
+            var attributes = nodeType.GetCustomAttributes(typeof(NodeMenuItemAttribute), false) as NodeMenuItemAttribute[];
+
+            if (attributes != null)
+            {
+                
+                foreach (var attr in attributes)
+                {
+                    localNodes.menutitleToNode.Add(attr.path, nodeType);
+                }
+
+                // Look for in and out fields 
+                //
+
+
+
+
+
+
+
+            }
+
 
 
             //          if (nodeType.IsAbstract)
@@ -45,6 +63,22 @@ static class NodeCollector
         
 
     }
+
+
+/*
+		public static IEnumerable<(string path, Type type)>	GetNodeMenuEntries(BaseGraph graph = null)
+		{
+			foreach (var node in genericNodes.nodePerMenuTitle)
+				yield return (node.Key, node.Value);
+
+			if (graph != null && specificNodeDescriptions.TryGetValue(graph, out var specificNodes))
+			{
+				foreach (var node in specificNodes.nodePerMenuTitle)
+					yield return (node.Key, node.Value);
+			}
+		}
+*/
+
 
     public static void GetAllSpecialNodes(){
 
