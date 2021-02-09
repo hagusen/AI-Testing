@@ -15,6 +15,7 @@ public class floormanager_01_V1 : MonoBehaviour
     private GameObject[] facilityObjects;
 
 
+
     private List<List<GameObject>> objectFloorLists = new List<List<GameObject>>();
     private List<List<Vector3>> positionFloorLists = new List<List<Vector3>>();
 
@@ -24,10 +25,10 @@ public class floormanager_01_V1 : MonoBehaviour
            positionFloorLists.Add(new List<Vector3>()); 
         }    
     }
-    public void GenerateFloor(Image blueprint, Vector2 blueprintPos, int floorIndex){
+    public void GenerateRoom(Texture2D blueprint, Vector2 blueprintPos, int floorIndex){
 
+        Color[] roomTiles = new Color[blueprint.GetPixels().Length];
         //CHECK IF LIST IS EMPTY IN THAT INDEX ELSE
-
         //loop each pixel and check position
         //Instantiate corresponding gameobject
         GameObject Tmp = new GameObject();

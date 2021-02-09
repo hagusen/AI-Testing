@@ -7,22 +7,22 @@ using UnityEngine.UI;
 public class blueprintmanager_01_v2 : MonoBehaviour
 {
 
-    public Image[] superBlueprints;
-    public Image[] normalBlueprints;
+    public Texture2D[] superBlueprints;
+    public Texture2D[] normalBlueprints;
 
-    public Image[] treasureBlueprints;
+    public Texture2D[] treasureBlueprints;
     //ETC ETC
 
 
 
 
-    public Image GetRandomSuperBlueprint(){
+    public Texture2D GetRandomSuperBlueprint(){
 
         return superBlueprints[Random.Range(0, superBlueprints.Length)];
     }
 
-    public Image[] GetRoomsFromSuperBlueprint(Image img){
-        Image[] imgArray = new Image[/*Storlek av img antal pixlar*/ 10];
+    public Texture2D[] GetRoomsFromSuperBlueprint(Texture2D img){
+        Texture2D[] imgArray = new Texture2D[img.GetPixels().Length];
         //Read img pixels and choose correct room
         //select image from corresponding array
         //rotate the image

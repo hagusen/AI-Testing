@@ -6,30 +6,21 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] 
-    private GameObject roof;
-    [SerializeField] 
-    private GameObject wall;
-    [SerializeField] 
-    private GameObject wallRare;
-    [SerializeField] 
-    private GameObject floor;
-    [SerializeField] 
-    private GameObject floorRare;
-
     private blueprintmanager_01_v2 blueprintManager;
-    private Image[] blueprints;
-
-
-
-
-    private Image superBlueprint;
-
+    private floormanager_01_V1 floormanager;
+    
+    
+    
+    
+    
+    private Texture2D[] blueprints;
+    private Texture2D superBlueprint;
+    private Texture2D blueprint;
     void Start()
     {
         blueprintManager = this.GetComponent<blueprintmanager_01_v2>();
         superBlueprint = blueprintManager.GetRandomSuperBlueprint();
         blueprints = blueprintManager.GetRoomsFromSuperBlueprint(superBlueprint);
-        
+        floormanager.GenerateRoom(blueprints[1], new Vector2(1 , 1), 1);
     }
 }
