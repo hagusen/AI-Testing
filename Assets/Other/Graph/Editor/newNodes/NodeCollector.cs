@@ -38,7 +38,7 @@ static class NodeCollector
                 
                 foreach (var attr in attributes)
                 {
-                    localNodes.menutitleToNode.Add(attr.path, nodeType);
+                    //localNodes.menutitleToNode.Add(attr.path, nodeType);
                 }
 
                 // Look for in and out fields 
