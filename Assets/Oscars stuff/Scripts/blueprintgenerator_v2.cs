@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class blueprintmanager_01_v2 : MonoBehaviour
+public class blueprintgenerator_v2 : MonoBehaviour
 {
 
     public Texture2D[] superBlueprints;
@@ -15,8 +15,7 @@ public class blueprintmanager_01_v2 : MonoBehaviour
 
 
 
-
-    public Texture2D GetRandomSuperBlueprint(){
+    public Texture2D GetRandomSuperBlueprint(int floorIndex){
 
         return superBlueprints[Random.Range(0, superBlueprints.Length)];
     }
@@ -27,6 +26,8 @@ public class blueprintmanager_01_v2 : MonoBehaviour
         //select image from corresponding array
         //rotate the image
         //add image to the new image array
+        Debug.Log("img array" + imgArray.Length);
+        imgArray[0] = normalBlueprints[0];
         return  imgArray;
     }
     
