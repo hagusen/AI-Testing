@@ -11,7 +11,9 @@ public class MeshTest : MonoBehaviour
     Mesh mesh;
     Vector3[] vertices;
     int[] triangles;
+    Vector2[] uv;
 
+    
 
 
     Grid<bool> grid;
@@ -19,11 +21,11 @@ public class MeshTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grid = new Grid<bool>(100, 100, 1, Vector3.zero);
+        grid = new Grid<bool>(10, 10, 1, Vector3.zero);
 
         for (int i = 0; i < grid.GetHeight(); i++)
         {
-            grid.SetValue(34,i, true);
+           grid.SetValue(3 ,i, true);
         }
 
         mesh = new Mesh();
@@ -44,6 +46,8 @@ public class MeshTest : MonoBehaviour
 
         vertices = new Vector3[xSize * zSize * 4];
         triangles = new int[xSize * zSize * 6];
+        uv = new Vector2[vertices.Length];
+
 
         int v, t;
         v = t = 0;
@@ -68,13 +72,22 @@ public class MeshTest : MonoBehaviour
                     triangles[t + 2] = triangles[t + 3] = v + 2;
                     triangles[t + 5] = v + 3;
 
+                    uv[v] = new Vector2(0, 1);
+                    uv[v+1] = new Vector2(.333f, 1);
+                    uv[v+2] = new Vector2(0, 1-.333f);
+                    uv[v+3] = new Vector2(.333f, 1- .333f);
+                 
+
                 if (obj == true)
                 {
-                    
                     vertices[v] = vertices[v] + Vector3.up;
                     vertices[v+1] = vertices[v+1] + Vector3.up;
                     vertices[v+2] = vertices[v+2] + Vector3.up;
                     vertices[v+3] = vertices[v+3] + Vector3.up;
+                    uv[v] = new Vector2(.5f, .5f);
+                    uv[v+1] = new Vector2(.5f, 1);
+                    uv[v+2] = new Vector2(1, .5f);
+                    uv[v+3] = new Vector2(1, 1);
                 }
 
                 v += 4;
@@ -90,8 +103,17 @@ public class MeshTest : MonoBehaviour
         mesh.Clear();
 
 
+        vertices[0] = new Vector3(0,1,0);
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uv;
+        
+        mesh.RecalculateNormals();
+
+
+    }
+     void Update() {
+        
         mesh.RecalculateNormals();
 
     }
