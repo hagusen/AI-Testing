@@ -21,7 +21,7 @@ public class MeshTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grid = new Grid<bool>(10, 10, 1, Vector3.zero);
+        grid = new Grid<bool>(1000, 1000, 1, Vector3.zero);
 
         for (int i = 0; i < grid.GetHeight(); i++)
         {
@@ -114,17 +114,20 @@ public class MeshTest : MonoBehaviour
     }
      void Update() {
         
-        mesh.RecalculateNormals();
+        //mesh.RecalculateNormals();
 
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        foreach (var item in vertices)
-        {
+        if (!(vertices is null))
+        { 
+            Gizmos.color = Color.red;
+            foreach (var item in vertices)
+            {
 
-            //Gizmos.DrawSphere(item, .1f);
+                //Gizmos.DrawSphere(item, .1f);
+            }
         }
     }
 

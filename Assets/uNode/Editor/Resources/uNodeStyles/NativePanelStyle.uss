@@ -1,0 +1,132 @@
+#scroll-view {
+    background-color: #202020;
+}
+
+.ui-hidden {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+#spacer {
+    flex-grow: 1;
+}
+
+#title {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-color: #383838;
+    background-color: #313131;
+}
+
+#title-icon{
+    width: 16px;
+    height: 16px;
+}
+
+#title-button-add {
+    background-color: #111111;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#title-button-add:hover {
+    background-color: #33516d;
+}
+
+#title-button-add:hover:active {
+    background-color: #0f3961;
+}
+
+#content-button-remove {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(10, 10, 10);
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-radius: 2;
+    border-width: 2px;
+    font-size: 18px;
+}
+
+#content-button-remove:hover {
+    background-color: #b00000;
+}
+
+#content-button-remove:hover:active {
+    background-color: #850000;
+}
+
+#content-button-remove Label {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    flex-grow: 1;
+    -unity-text-align: middle-center;
+}
+
+#contents {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 18px;
+}
+
+#content {
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+#content > #icon {
+    flex-shrink: 0;
+}
+
+#content > Label {
+    flex-grow: 1;
+}
+
+#content.active {
+    background-color: #27599b;
+}
+
+#content.selected {
+    background-color: #3562b6;
+}
+
+#content:hover {
+    background-color: #3b527e;
+}
+
+#icon {
+    width: 18px;
+    height: 18px;
+}
+
+#namespace > #value {
+    flex-grow: 1;
+    background-color: #111111;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#namespace > #value:hover {
+    background-color: #33516d;
+}
+
+#namespace > #value:hover:active {
+    background-color: #0f3961;
+}
+
+.property-accessor {
+    margin-left: 18px;
+}
+
+#content.property-accessor.active {
+    background-color: #70752e;
+}
+
+#content.property-accessor.selected {
+    background-color: #585858;
+}

@@ -1,0 +1,505 @@
+{
+    "3b42da530203b08419823ea2083e0897": {
+        "11500000": "MaxyGames.uNode.Editors.MissingScriptResolver"
+    },
+    "60914497692399048b3840add0b43475": {
+        "11500000": "MaxyGames.uNode.Editors.WelcomeWindow"
+    },
+    "e87628d44dad06f44ae53d74fd15ed5f": {
+        "11500000": "MaxyGames.EventSystem.FixedUpdateEvent"
+    },
+    "84159ae18bc4dfa4c817fb5a3f0d342a": {
+        "11500000": "MaxyGames.EventSystem.LateUpdateEvent"
+    },
+    "d71f87ed08af16d479f706c1f63733d4": {
+        "11500000": "MaxyGames.EventSystem.OnApplicationFocusEvent"
+    },
+    "11c8c038d37a901458b7b004fd3f0a25": {
+        "11500000": "MaxyGames.EventSystem.OnApplicationPauseEvent"
+    },
+    "764753c0469133a40b94cceb9cb7e8c1": {
+        "11500000": "MaxyGames.EventSystem.OnApplicationQuitEvent"
+    },
+    "16b6d60f37dc73347a42733429813ce4": {
+        "11500000": "MaxyGames.EventSystem.OnCollisionEnterEvent"
+    },
+    "de6441e2d8c41a2428d1bfa24a5e6954": {
+        "11500000": "MaxyGames.EventSystem.OnCollisionExitEvent"
+    },
+    "a3cb856dcad3899468b8f766bac8a705": {
+        "11500000": "MaxyGames.EventSystem.OnCollisionStayEvent"
+    },
+    "127f036678bab054dbca72a2bf92fde4": {
+        "11500000": "MaxyGames.EventSystem.OnDestroyEvent"
+    },
+    "cc1ad106c76e1d94388964a8c81df098": {
+        "11500000": "MaxyGames.EventSystem.OnDisableEvent"
+    },
+    "b8777dbd2a0d8da44b428fa07e698c2c": {
+        "11500000": "MaxyGames.EventSystem.OnEnableEvent"
+    },
+    "6adf265a33d96ad4d853e53af26a4a71": {
+        "11500000": "MaxyGames.EventSystem.OnGUIEvent"
+    },
+    "1109f9e806397824e90b1b6db869fa1c": {
+        "11500000": "MaxyGames.EventSystem.OnMouseDownEvent"
+    },
+    "7e9c0b271a19e474cbe7473f786b3d38": {
+        "11500000": "MaxyGames.EventSystem.OnMouseDragEvent"
+    },
+    "651e227203a993245ba756aa2bac5ee5": {
+        "11500000": "MaxyGames.EventSystem.OnMouseEnterEvent"
+    },
+    "e9f730f631704704c99594c23f9c48cf": {
+        "11500000": "MaxyGames.EventSystem.OnMouseExitEvent"
+    },
+    "e77e98cd4463d884db4a09ee354153d5": {
+        "11500000": "MaxyGames.EventSystem.OnMouseOverEvent"
+    },
+    "c19e55f32f9b4774594cea3ce1907385": {
+        "11500000": "MaxyGames.EventSystem.OnMouseUpAsButtonEvent"
+    },
+    "f3328aaafec784b40bdd709235b722c5": {
+        "11500000": "MaxyGames.EventSystem.OnMouseUpEvent"
+    },
+    "c5cdb31d2761aa449bd6acd500390a3c": {
+        "11500000": "MaxyGames.EventSystem.OnStartEvent"
+    },
+    "8204ffba9d9f13f4593c309a38f5279f": {
+        "11500000": "MaxyGames.EventSystem.OnTriggerEnterEvent"
+    },
+    "cac9eee659b3ef148baa72d05b3de12c": {
+        "11500000": "MaxyGames.EventSystem.OnTriggerExitEvent"
+    },
+    "a5251030659e99c459f5c606cebfedbc": {
+        "11500000": "MaxyGames.EventSystem.OnTriggerStayEvent"
+    },
+    "fc20e649858420e498229348bd2b74d8": {
+        "11500000": "MaxyGames.EventSystem.UpdateEvent"
+    },
+    "271529f0567b56e4189a0a10305f9e5e": {
+        "11500000": "MaxyGames.EventSystem.ForeachLoop"
+    },
+    "835626be8866cb046aeeb4f853ee9846": {
+        "11500000": "MaxyGames.EventSystem.ForLoop"
+    },
+    "6c87e32ebbaf5fc41af5138d0a28b088": {
+        "11500000": "MaxyGames.uNode.Nodes.RandomSelector"
+    },
+    "a17d81f20dfb25342848e6e51b65db18": {
+        "11500000": "MaxyGames.uNode.Nodes.RandomSequence"
+    },
+    "c11879bd9c77d56429ee8068d82d21a0": {
+        "11500000": "MaxyGames.uNode.Nodes.Selector"
+    },
+    "351e753e1c79d3d4b9c2b139ef74bfb9": {
+        "11500000": "MaxyGames.uNode.Nodes.Sequence"
+    },
+    "ef332ac9cb33acd4785d9ed753b16fb5": {
+        "11500000": "MaxyGames.uNode.Nodes.Failer"
+    },
+    "7c139569b937de34eb3e8977d88e47ef": {
+        "11500000": "MaxyGames.uNode.Nodes.Inverter"
+    },
+    "55bb0c47ffde7e847b18a6efa7611959": {
+        "11500000": "MaxyGames.uNode.Nodes.Repeater"
+    },
+    "b32d47992fa63154cb143074945d6ceb": {
+        "11500000": "MaxyGames.uNode.Nodes.Succeeder"
+    },
+    "ea20e06fe42e3c94d9309a88b173980e": {
+        "11500000": "MaxyGames.uNode.Nodes.UntilFailure"
+    },
+    "8ea24f1f2e81c01468ed229d34762c6e": {
+        "11500000": "MaxyGames.uNode.Nodes.UntilSuccess"
+    },
+    "f014ef958621838498634898ac4e10e7": {
+        "11500000": "MaxyGames.uNode.Nodes.EventHook"
+    },
+    "4189335aa217db04eb253f6481834656": {
+        "11500000": "MaxyGames.uNode.Nodes.FlowControl"
+    },
+    "29779b7fc59a88f459967f7ae88133d0": {
+        "11500000": "MaxyGames.uNode.Nodes.FlowOnce"
+    },
+    "222927cf2cd31e54c912330330ab910a": {
+        "11500000": "MaxyGames.uNode.Nodes.FlowToggle"
+    },
+    "2c3ab5fcc7134cc41ab0e0ead21b17ae": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeIf"
+    },
+    "7ed9f1dd1dec2c44fa07d4f950eaa659": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeSwitch"
+    },
+    "1770289e65aa75e4482705ef43777632": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeThrow"
+    },
+    "7abfd39179c36dd4aaa833b106a067e2": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeTry"
+    },
+    "0b0391371b4961a4c8aedbe9e0f44418": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeYieldReturn"
+    },
+    "e8406ca3b5fb433478115c9cf9304d8b": {
+        "11500000": "MaxyGames.uNode.Nodes.DoWhileLoopGroup"
+    },
+    "82ce529c3032cff488f9458b09adaeff": {
+        "11500000": "MaxyGames.uNode.Nodes.ForeachLoopGroup"
+    },
+    "7b239791f16f7ec489966bd1163a3f4c": {
+        "11500000": "MaxyGames.uNode.Nodes.ForLoopGroup"
+    },
+    "e4f1637abfed2454ba3e8c4bd61d632c": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeGroup"
+    },
+    "41ab0a2d60c6972439f6a9e4c8539bf5": {
+        "11500000": "MaxyGames.uNode.Nodes.WhileLoopGroup"
+    },
+    "0ae572f9b86f55c48b2327b79226e222": {
+        "11500000": "MaxyGames.uNode.Nodes.LinkedMacroNode"
+    },
+    "f09fae82fdf80254cb81a2d271eb991a": {
+        "11500000": "MaxyGames.uNode.Nodes.MacroNode"
+    },
+    "6bba59b072cc98f439190e49320c0fd7": {
+        "11500000": "MaxyGames.uNode.Nodes.MacroPortNode"
+    },
+    "9b9e3deee2e41b94c90c1160df6649d2": {
+        "11500000": "MaxyGames.uNode.uNodeMacro"
+    },
+    "d045fee2acd3dbe47ac23d39c86fd454": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeAction"
+    },
+    "df29a61ad741f56488f965785a7a1caa": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeCoroutineAction"
+    },
+    "57aea54190670ef43ba04f07ab3ec27d": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeValidation"
+    },
+    "26263170d7782b54ab4941206d121f21": {
+        "11500000": "MaxyGames.uNode.Nodes.ActivateTransition"
+    },
+    "9da58d59f5d6f624881ec64cbc7eb258": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeAnimateFloat"
+    },
+    "45a19a6d6de58bf43b2fbdb0bae00f1a": {
+        "11500000": "MaxyGames.uNode.Nodes.ParallelControl"
+    },
+    "4b32c4c7bd58f544f8ec012198b4d238": {
+        "11500000": "MaxyGames.uNode.Nodes.StopFlowNode"
+    },
+    "395031935ed650f43bc8afd72e4ba819": {
+        "11500000": "MaxyGames.uNode.Nodes.DoWhileLoop"
+    },
+    "8e39f64a66bd3a147a88e16e7e2e44d1": {
+        "11500000": "MaxyGames.uNode.Nodes.ForeachLoop"
+    },
+    "b4cb95da2590d234f92069859a6555f3": {
+        "11500000": "MaxyGames.uNode.Nodes.ForNumberLoop"
+    },
+    "a6fb3159a91e5774bbfde1134c818e4e": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeLock"
+    },
+    "edcc94cffb0606a489318bc9d4067cd7": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeUsing"
+    },
+    "1ee25bba587ca5d4caec78ec26b27869": {
+        "11500000": "MaxyGames.uNode.Nodes.WhileLoop"
+    },
+    "131911591f8769d4782326be9e6bd94a": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeTimer"
+    },
+    "4f3a0a7fd3d2d5b4c9cd904dc0acb00c": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeWaitForSecond"
+    },
+    "3bfa2e66ed5e15a4cb7d3fabb7decdbf": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeWaitUntil"
+    },
+    "e3b0f751dd240cd49abf0b21c8ef8417": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeWaitWhile"
+    },
+    "004da3a63ebcd9347a30537c9643fc9a": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeYieldBreak"
+    },
+    "94e8014539cadc44baed86b3db4b6eca": {
+        "11500000": "RuntimeSMHelper"
+    },
+    "6ae07b54354e7834cbec9c2805669d50": {
+        "925797712": "FullSerializer.fsAotConfiguration"
+    },
+    "b6c247930fad8e0418b237aa31ca9ee1": {
+        "11500000": "MaxyGames.uNode.Transition.ConditionTransition"
+    },
+    "a87798a66d503264d8d9ba8a146eef73": {
+        "11500000": "MaxyGames.uNode.Transition.CustomTransition"
+    },
+    "223893029a92c4e4b8b731b386997e2d": {
+        "11500000": "MaxyGames.uNode.Transition.OnApplicationFocus"
+    },
+    "7efd05db1e6aeb64fa8055021e89b1f0": {
+        "11500000": "MaxyGames.uNode.Transition.OnApplicationPause"
+    },
+    "351fbd685b0c625468335bccaf20c780": {
+        "11500000": "MaxyGames.uNode.Transition.OnApplicationQuit"
+    },
+    "53c99e21c9d482d43b9c78f96b653723": {
+        "11500000": "MaxyGames.uNode.Transition.OnBecameInvisible"
+    },
+    "c670676c194201a43ab68d5dbee7de5b": {
+        "11500000": "MaxyGames.uNode.Transition.OnBecameVisible"
+    },
+    "ac0da7e0b20ccce47ae27996c8571440": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionEnter"
+    },
+    "00cef44ede3cf5d4c969e5a626de5c5b": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionEnter2D"
+    },
+    "4b9d4e6ce0e09a84d90fd6fee387bb50": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionExit"
+    },
+    "cd0f8a04ffabde243b0197c8c09a6bbd": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionExit2D"
+    },
+    "d571bc2797c239a4fb1746f89747cb92": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionStay"
+    },
+    "0e9885fd795aad9459c116737c2098f5": {
+        "11500000": "MaxyGames.uNode.Transition.OnCollisionStay2D"
+    },
+    "ee6e0af1528071b4c912bf77eed0ee2a": {
+        "11500000": "MaxyGames.uNode.Transition.OnDestroy"
+    },
+    "72636c49eb319f7458b8a46224f4c727": {
+        "11500000": "MaxyGames.uNode.Transition.OnDisable"
+    },
+    "a16f6d9a0ccd287449cf2d5064c354a9": {
+        "11500000": "MaxyGames.uNode.Transition.OnEnable"
+    },
+    "26dd0b9e4e6ac0647919991006638f9b": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseDown"
+    },
+    "f5d7cf38d3553af4fac7c1c6a326abf4": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseDrag"
+    },
+    "0595b537ae2b8cb48a8b34fafb8a4f00": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseEnter"
+    },
+    "85230f22be17eee4a8b035ed201be1f2": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseExit"
+    },
+    "ce8eb8f9aa256e84cbc2ff031a43d47f": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseOver"
+    },
+    "382dfb3a7d3cb734199c75db436643d4": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseUp"
+    },
+    "8751daac500381641ae5ff98213d35d7": {
+        "11500000": "MaxyGames.uNode.Transition.OnMouseUpAsButton"
+    },
+    "c957fcd39186e094b9d36985dd3e74d8": {
+        "11500000": "MaxyGames.uNode.Transition.OnTimerElapsed"
+    },
+    "6db59f392fe006246a38e07c85c9ce1a": {
+        "11500000": "MaxyGames.uNode.Transition.OnTransformChildrenChanged"
+    },
+    "9630c85f9bd4d5a45b3f80161a4be257": {
+        "11500000": "MaxyGames.uNode.Transition.OnTransformParentChanged"
+    },
+    "37267502d4c5d0c4382eccf83b43fe3d": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerEnter"
+    },
+    "e9d65e21a4000b041910c906322dc899": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerEnter2D"
+    },
+    "8118303ee3376324d89f760b853820ff": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerExit"
+    },
+    "42b78cf84fa06044b978b22adcaf26e1": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerExit2D"
+    },
+    "341fe0c9a477f194c9f5c41d94e3f640": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerStay"
+    },
+    "8412328a9bf00d8459056fc6ed9ee823": {
+        "11500000": "MaxyGames.uNode.Transition.OnTriggerStay2D"
+    },
+    "fe269b1c90859c5458634f418bbd47da": {
+        "888553119": "MaxyGames.uNode.BaseEventNode",
+        "-992055951": "MaxyGames.EventSystem.ConditionalEvent",
+        "-718403327": "MaxyGames.uNode.CustomNode",
+        "-495928941": "MaxyGames.EventSystem.ElseEvent",
+        "50716467": "MaxyGames.EventSystem.ESAction",
+        "-1223049816": "MaxyGames.EventSystem.ESBlock",
+        "603145105": "MaxyGames.EventSystem.ESComponent",
+        "697449077": "MaxyGames.EventSystem.ESCondition",
+        "-1163687911": "MaxyGames.EventSystem.ESEvent",
+        "1252666761": "MaxyGames.EventSystem.ESLoop",
+        "1251675079": "MaxyGames.EventSystem.EventBlock",
+        "-1214583630": "MaxyGames.uNode.EventCaller",
+        "1574179060": "MaxyGames.uNode.EventNode",
+        "600618383": "MaxyGames.EventSystem.EventSheet",
+        "-1386633449": "MaxyGames.EventSystem.EventSheetContainer",
+        "-291821094": "MaxyGames.uNode.FixedUpdateCaller",
+        "-1000189592": "MaxyGames.uNode.GlobalVariable",
+        "-500246425": "MaxyGames.uNode.GraphAsset",
+        "-448457018": "MaxyGames.uNode.GroupNode",
+        "-1522906999": "MaxyGames.uNode.LateUpdateCaller",
+        "1792710715": "MaxyGames.uNode.MultipurposeNode",
+        "145597520": "MaxyGames.uNode.Node",
+        "1803002209": "MaxyGames.uNode.NodeComponent",
+        "-1608468362": "MaxyGames.uNode.NodeJumpStatement",
+        "1425519710": "MaxyGames.uNode.NodeRegion",
+        "2144386798": "MaxyGames.uNode.NodeReturn",
+        "479574995": "MaxyGames.uNode.NodeSetValue",
+        "195801194": "MaxyGames.uNode.OnAnimatorIKCaller",
+        "234042974": "MaxyGames.uNode.OnAnimatorMoveCaller",
+        "777754630": "MaxyGames.uNode.OnApplicationFocusCaller",
+        "-1823048181": "MaxyGames.uNode.OnApplicationPauseCaller",
+        "-1510858879": "MaxyGames.uNode.OnApplicationQuitCaller",
+        "-1792470302": "MaxyGames.uNode.OnBecameInvisibleCaller",
+        "-567423194": "MaxyGames.uNode.OnBecameVisibleCaller",
+        "239643705": "MaxyGames.uNode.OnCollisionEnter2DCaller",
+        "-80833337": "MaxyGames.uNode.OnCollisionEnterCaller",
+        "-80944465": "MaxyGames.uNode.OnCollisionExit2DCaller",
+        "-1444552910": "MaxyGames.uNode.OnCollisionExitCaller",
+        "-813863024": "MaxyGames.uNode.OnCollisionStay2DCaller",
+        "229798860": "MaxyGames.uNode.OnCollisionStayCaller",
+        "2009272879": "MaxyGames.uNode.OnDestroyCaller",
+        "-469145655": "MaxyGames.uNode.OnGUICaller",
+        "2097149817": "MaxyGames.uNode.OnMouseDownCaller",
+        "1956890092": "MaxyGames.uNode.OnMouseDragCaller",
+        "1583751477": "MaxyGames.uNode.OnMouseEnterCaller",
+        "-559983579": "MaxyGames.uNode.OnMouseExitCaller",
+        "1958435880": "MaxyGames.uNode.OnMouseOverCaller",
+        "-1221941271": "MaxyGames.uNode.OnMouseUpAsButtonCaller",
+        "-1656626857": "MaxyGames.uNode.OnMouseUpCaller",
+        "1176665163": "MaxyGames.uNode.OnPostRenderCaller",
+        "-580964127": "MaxyGames.uNode.OnPreCullCaller",
+        "753172269": "MaxyGames.uNode.OnPreRenderCaller",
+        "55898134": "MaxyGames.uNode.OnRenderObjectCaller",
+        "-638777298": "MaxyGames.uNode.OnTransformChildrenChangedCaller",
+        "396672796": "MaxyGames.uNode.OnTransformParentChangedCaller",
+        "67253350": "MaxyGames.uNode.OnTriggerEnter2DCaller",
+        "-2138708795": "MaxyGames.uNode.OnTriggerEnterCaller",
+        "1286339764": "MaxyGames.uNode.OnTriggerExit2DCaller",
+        "1760501297": "MaxyGames.uNode.OnTriggerExitCaller",
+        "1803751902": "MaxyGames.uNode.OnTriggerStay2DCaller",
+        "219523859": "MaxyGames.uNode.OnTriggerStayCaller",
+        "664709512": "MaxyGames.uNode.OnWillRenderObjectCaller",
+        "263950045": "MaxyGames.uNode.RootObject",
+        "-93630044": "MaxyGames.uNode.StateEventNode",
+        "-1392623239": "MaxyGames.uNode.StateNode",
+        "1796242225": "MaxyGames.uNode.Nodes.StickyNote",
+        "744942128": "MaxyGames.uNode.TransitionEvent",
+        "-1525477794": "MaxyGames.EventSystem.TriggerEvent",
+        "1768759056": "MaxyGames.uNode.uNodeBase",
+        "1769430123": "MaxyGames.uNode.uNodeClass",
+        "1002736610": "MaxyGames.uNode.uNodeComponent",
+        "1870406473": "MaxyGames.uNode.uNodeComponentSystem",
+        "1561365086": "MaxyGames.uNode.uNodeConstuctor",
+        "-1180184023": "MaxyGames.uNode.uNodeData",
+        "-1983597304": "MaxyGames.uNode.uNodeFunction",
+        "455601936": "MaxyGames.uNode.uNodeIndexer",
+        "1559269472": "MaxyGames.uNode.uNodeProperty",
+        "1682674106": "MaxyGames.uNode.uNodeRoot",
+        "-93768541": "MaxyGames.uNode.uNodeRuntime",
+        "-1846226521": "MaxyGames.uNode.uNodeSpawner",
+        "530757161": "MaxyGames.uNode.uNodeStruct",
+        "-2129787101": "MaxyGames.uNode.uNodeTemplate",
+        "-2024657274": "MaxyGames.uNode.UpdateCaller",
+        "-425536005": "MaxyGames.uNode.ValueNode"
+    },
+    "6b4ce0e6ab523204ba8302f2a43a581f": {
+        "1521830621": "MaxyGames.uNode.Editors.ActionPopupWindow",
+        "2021978766": "MaxyGames.uNode.Editors.ActionWindow",
+        "-1730260108": "MaxyGames.uNode.BaseEditorTheme",
+        "-1567460648": "MaxyGames.uNode.Editors.CommandWindow",
+        "329579975": "MaxyGames.uNode.Editors.CustomInspector",
+        "61579954": "MaxyGames.uNode.Editors.CustomInspectorEditor",
+        "-1453846740": "MaxyGames.uNode.EditorTheme",
+        "-1353595724": "MaxyGames.uNode.Editors.ErrorCheckWindow",
+        "38183501": "MaxyGames.EventSystem.Editors.EventSheetWindow",
+        "2116882789": "MaxyGames.uNode.Editors.FieldsEditorWindow",
+        "-16399917": "MaxyGames.uNode.Editors.ItemSelector",
+        "1036571278": "MaxyGames.uNode.Editors.PreviewSourceWindow",
+        "-665029535": "MaxyGames.uNode.Editors.RealtimePreviewSourceWindow",
+        "-1078563147": "MaxyGames.uNode.Editors.SupportWindow",
+        "-682954355": "MaxyGames.uNode.Editors.TooltipWindow",
+        "-143651410": "MaxyGames.uNode.Editors.TypeSelectorWindow",
+        "1106634962": "MaxyGames.uNodeLogger.uNodeConsoleWindow",
+        "1405998514": "MaxyGames.uNode.Editors.uNodeEditor",
+        "-66440156": "MaxyGames.uNode.Editors.uNodeHierarchy",
+        "-1448387910": "MaxyGames.uNodeLogger.uNodeLoggerEditor",
+        "-93104484": "MaxyGames.uNode.Editors.VariableEditorWindow"
+    },
+    "5872ca0c3f7f3504691c84641540c31b": {
+        "11500000": "MaxyGames.uNode.Nodes.ANDNode"
+    },
+    "6c465e7282b6af04a962ccb54f35898b": {
+        "11500000": "MaxyGames.uNode.Nodes.ArithmeticNode"
+    },
+    "0e7e8a0a3fce7f94790798f2116c3852": {
+        "11500000": "MaxyGames.uNode.Nodes.ASNode"
+    },
+    "482351bed7f10c347b5db6f663c34d6b": {
+        "11500000": "MaxyGames.uNode.Nodes.BitwiseNode"
+    },
+    "91c75e24512c02840b64e5ab15769267": {
+        "11500000": "MaxyGames.uNode.Nodes.CoalescingNode"
+    },
+    "02b5257ddbcf80548ab8b7a3ad390897": {
+        "11500000": "MaxyGames.uNode.Nodes.ComparisonNode"
+    },
+    "26914812e3bd1fa4dacacaee1cf72379": {
+        "11500000": "MaxyGames.uNode.Nodes.ConditionalNode"
+    },
+    "41967db180a2360498e639c39d3492c8": {
+        "11500000": "MaxyGames.uNode.Nodes.ConditionNode"
+    },
+    "c9cf5e92571cb004887a9c4de3775f5d": {
+        "11500000": "MaxyGames.uNode.Nodes.DefaultNode"
+    },
+    "d059270186ef3494c8328440971f74af": {
+        "11500000": "MaxyGames.uNode.Nodes.IncrementDecrementNode"
+    },
+    "56ff67349fab49849b6651718e136286": {
+        "11500000": "MaxyGames.uNode.Nodes.ISNode"
+    },
+    "4d4d19c68db73ca438c3e8f119c0a4af": {
+        "11500000": "MaxyGames.uNode.Nodes.MakeArrayNode"
+    },
+    "eed38dd781ce2ae4eacc0670909acd9a": {
+        "11500000": "MaxyGames.uNode.Nodes.MultiANDNode"
+    },
+    "08a09f637ea5c854e92a7dc9887a2c81": {
+        "11500000": "MaxyGames.uNode.Nodes.MultiArithmeticNode"
+    },
+    "1eee5df628bc53840a011c5a5c2f7eef": {
+        "11500000": "MaxyGames.uNode.Nodes.MultiORNode"
+    },
+    "8be26ec4262b6ce4ebb341a44f262412": {
+        "11500000": "MaxyGames.uNode.Nodes.NegateNode"
+    },
+    "38db198000cdab045890aea2e8df1c75": {
+        "11500000": "MaxyGames.uNode.Nodes.NodeAnonymousFunction"
+    },
+    "547e1f9cad08a5f408981a04bff2a29d": {
+        "11500000": "MaxyGames.uNode.Nodes.NotNode"
+    },
+    "f6a187b93142cab48a205c03946821a6": {
+        "11500000": "MaxyGames.uNode.Nodes.ORNode"
+    },
+    "ee54a5d8c5fa95547a98c7d026d79250": {
+        "11500000": "MaxyGames.uNode.Nodes.SelectNode"
+    },
+    "07caba4c73851d64789d8e934522a4a2": {
+        "11500000": "MaxyGames.uNode.Nodes.ShiftNode"
+    },
+    "959f19f9136452443be37ca9b0d9daf0": {
+        "11500000": "MaxyGames.uNode.Nodes.StringBuilderNode"
+    },
+    "eed5482b13b1e6941a3f1c5fd52a515f": {
+        "11500000": "MaxyGames.uNode.Nodes.PerSecond"
+    },
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+}

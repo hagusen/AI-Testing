@@ -1,0 +1,5 @@
+check sqrmag with player every AIupdate
+then call AIMovement to set state to move
+
+
+then raycast check with player

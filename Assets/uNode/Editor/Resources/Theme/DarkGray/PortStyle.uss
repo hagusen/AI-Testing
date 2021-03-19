@@ -1,0 +1,61 @@
+.flow-port.input {
+	--port-color: rgb(0, 147, 51);
+}
+
+.flow-port.output {
+    --port-color: rgb(0, 200, 70);
+}
+
+.flow-port > #connector {
+    background-color: #212121;
+    width: 12px;
+	height: 12px;
+}
+
+.flow-port.output {
+	height: 22px;
+}
+
+.flow-port > #connector > #cap {
+	width: 8px;
+	height: 8px;
+}
+
+PortInputView > #container {
+	border-right-width: 4px;
+	border-left-width: 0px;
+}
+
+.flow-port.output > #type {
+    font-size: 10px;
+}
+
+.flow-port > #container > #slotContainer {
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    border-left-width: 0.5px;
+    border-right-width: 1px;
+    border-radius: 6px;
+}
+
+/* flow proxy margin */
+.flow-port.input > #connector.proxy {
+    margin-right: 4px;
+}
+
+/* flow proxy margin */
+.flow-port.output > #connector.proxy {
+    margin-left: 3px;
+}
+
+/* flow proxy width */
+.flow-port.input #proxy-line {
+    width: 4px;
+    height:18px;
+}
+
+.flow-port.output #proxy-line {
+    width: 4px;
+    height: 19px;
+    top: -20px;
+}

@@ -1,0 +1,128 @@
+#graphRootView {
+    background-color: #202020;
+}
+
+#proxy-title {
+	background-color: rgba(29,29,29,0.8);
+	border-color: rgba(23, 171, 106, 0.8);
+	border-width: 1px;
+	border-radius: 6px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	position: absolute;
+	flex-direction: row;
+}
+
+#proxy-title.proxy-vertical {
+	background-color: rgba(15, 91, 35, 0.8);
+	border-color: rgba(23, 171, 106, 0.8);
+	border-width: 1px;
+	border-radius: 10px;
+	top: 12px;
+}
+
+#proxy-title.proxy-horizontal {
+	top: -5px;
+	margin-left: -2px;
+}
+
+.compact-value #proxy-title.proxy-horizontal {
+	top: -3px;
+}
+
+#proxy-title Image {
+	width: 16px;
+	height: 16px;
+}
+
+#proxy-title > Label {
+	-unity-text-align: middle-center;
+	-unity-font-style: italic;
+	font-size: 10px;
+}
+
+.ui-hidden {
+	width: 0;
+	height: 0;
+	display: none;
+	position: absolute;
+	visibility: hidden;
+}
+
+.hide-image Image {
+	width: 0;
+	height: 0;
+	position: absolute;
+	visibility: hidden;
+	display: none;
+}
+
+GridBackground {
+    --spacing: 10;
+    --line-color: rgba(26, 26, 26, 0.84);
+    --thick-lines: 10;
+    --thick-line-color: rgba(10, 10, 10, 0.84);
+}
+
+Toogle,
+TextField {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+PopupElement{
+	flex-shrink: 1;
+	flex-grow: 0;
+	flex-basis: auto;
+	min-height: 15px;
+}
+
+PopupElement > TextElement {
+	flex-shrink: 1;
+	flex-grow: 1;
+	white-space: nowrap;
+}
+
+PopupElement:hover {
+	background-color: rgb(91, 91, 91);
+}
+
+/* proxy */
+#proxy-line {
+	border-width: 0px;
+	position: absolute;
+}
+
+/* flow output proxy */
+.flow-port.output #proxy-line {
+	width: 2px;
+	height: 20px;
+	top: -21px;
+}
+
+/* flow input proxy */
+.flow-port.input #proxy-line {
+	width: 2px;
+	height: 21px;
+	top: 7px;
+}
+
+/* value output proxy */
+.value-port.output #proxy-line {
+	width: 23px;
+	height: 2px;
+	top: 2px;
+	left: -24px;
+}
+
+/* value input proxy */
+.value-port.input #proxy-line {
+	width: 17px;
+	height: 2px;
+	top: 2px;
+	left: 7px;
+}
+
+/* Node Styles */

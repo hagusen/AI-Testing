@@ -1,0 +1,18 @@
+#graphRootView {
+	background-color: rgb(27, 27, 27);
+}
+
+/* flow edge */
+.edge.flow {
+	--edge-width: 4;
+}
+
+/* flow edge on hover */
+.edge.flow::hover {
+	--edge-width: 6;
+}
+
+/* proxy vertical */
+#proxy-title.proxy-vertical {
+	top: 14px;
+}
